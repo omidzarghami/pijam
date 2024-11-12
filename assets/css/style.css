@@ -1,23 +1,200 @@
 :root {
+
     --dark-brown: #592F15;
     --light-brown: #B47C51;
     --cream: #F7E7D1;
     --olive-green: #7D8F69;
+
+    /* رنگ‌های اصلی */
+    --primary: #1B3B86;
+    /* آبی سرمه‌ای */
+    --secondary: #B8B88A;
+    /* سبز روشن خاکستری */
+    --accent: #3A5F41;
+    /* سبز تیره */
+    --background: #F5F5DC;
+    /* کرم روشن */
+    --white: #FFFFFF;
+    /* سفید */
+
+    /* سایه‌های رنگ اصلی برای حالت hover */
+    --primary-hover: #152d66;
+    --secondary-hover: #9a9a73;
+    --accent-hover: #2d4a33;
+
+    /* رنگ‌های متن */
+    --text-primary: #1B3B86;
+    --text-secondary: #3A5F41;
+    --text-light: #FFFFFF;
+
+    /* رنگ‌های پس‌زمینه */
+    --bg-primary: var(--background);
+    --bg-secondary: var(--white);
+    --bg-accent: var(--primary);
 }
+
+
 /* Reset default margin and padding */
-* {html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
-/* HTML5 display-role reset for older browsers */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display: block;}
-ol,ul {list-style: none;width: 100%;}
-blockquote,q {quotes: none;}
-blockquote:before,blockquote:after,q:before,q:after {content: '';content: none;}
-table {border-collapse: collapse;border-spacing: 0;}}
-html {scroll-behavior: smooth;}
+* {
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+        width: 100%;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* font-face */
-@font-face {font-family: 'iranyekan';src: url("../font/iranyekanwebboldfanum.woff") format("woff");font-weight: normal;font-style: normal;font-display: swap}
-body {font-family: "iranyekan", sans-serif;transition: background-color 0.3s ease;background-color: var(--olive-green);line-height: 1;}
-.light-mode {background: #ffffff;color: #333333;}
-.dark-mode {background-color: #333333;color: #ffffff;}
+@font-face {
+    font-family: 'iranyekan';
+    src: url("../font/iranyekanwebboldfanum.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+body {
+    font-family: "iranyekan", sans-serif;
+    transition: background-color 0.3s ease;
+    background-color: var(--olive-green);
+    line-height: 1;
+}
+
+.light-mode {
+    background: #ffffff;
+    color: #333333;
+}
+
+.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
 
 .container {
     width: 90%;
@@ -26,28 +203,31 @@ body {font-family: "iranyekan", sans-serif;transition: background-color 0.3s eas
     display: flex;
     flex-direction: column;
 }
+
 .container-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-  }
-  
-  .logo img {
-    max-width: 150px; /* یا اندازه مورد نظر شما */
+}
+
+.logo img {
+    max-width: 150px;
+    /* یا اندازه مورد نظر شما */
     height: auto;
     mix-blend-mode: multiply;
-  }
-  
-  @media (max-width: 768px) {
-    .logo img {
-      max-width: 100px; /* تنظیم اندازه برای صفحات کوچکتر */
-    }
-  }
-header {
-    background: var(--olive-green);
-    padding: 1rem;
 }
+
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 100px;
+        /* تنظیم اندازه برای صفحات کوچکتر */
+    }
+}
+
+header {
+    background: var(--accent);
+    padding: 1rem;}
 
 header h1 {
     margin: 1rem;
@@ -96,9 +276,12 @@ nav {
 
 .menu-section {
     padding: 1rem 0;
-    background-color: var(--light-brown);
-    border-radius: 10px;
-    background-image: url(../images/main.png);
+    /* border-radius: 10px; */
+    /* background-image: url(../images/main.png); */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3Cpattern id='tartan' x='0' y='0' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Crect width='20' height='20' fill='%231B3B86'/%3E%3Crect x='8' width='4' height='20' fill='%233A5F41' opacity='0.7'/%3E%3Crect x='18' width='2' height='20' fill='%23B8B88A' opacity='0.5'/%3E%3Crect y='8' width='20' height='4' fill='%233A5F41' opacity='0.7'/%3E%3Crect y='18' width='20' height='2' fill='%23B8B88A' opacity='0.5'/%3E%3Crect x='8' y='8' width='4' height='4' fill='%233A5F41' opacity='0.9'/%3E%3Crect x='18' y='18' width='2' height='2' fill='%23B8B88A' opacity='0.7'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23tartan)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    
 }
 
 .menu-items {
@@ -140,7 +323,9 @@ nav {
     color: #fff;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
-.dark-mode .menu-item span{color: #fff;
+
+.dark-mode .menu-item span {
+    color: #fff;
 
 }
 
@@ -148,52 +333,69 @@ nav {
     background-color: #333;
     color: #fff;
 }
-.dark-mode header a{
+
+.dark-mode header a {
     color: #fff;
 }
 
-.hamburger-menu {display: none;flex-direction: column;cursor: pointer;}
-.hamburger-menu .icon {margin-left: 10px;}
-.hamburger-menu-line {width: 30px;height: 3px;background-color: #333;margin: 3px;}
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .icon {
+    margin-left: 10px;
+}
+
+.hamburger-menu-line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px;
+}
+
 .x {
-    display:none;
+    display: none;
     position: relative;
     width: 30px;
     height: 30px;
-  
-  
-  .line {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color:#333;
-    transform-origin: center;
-  }
-  
-  .line:first-child {
-    transform: rotate(45deg);
-  }
-  
-  .line:last-child {
-    transform: rotate(-45deg);
-  }
+
+
+    .line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transform-origin: center;
+    }
+
+    .line:first-child {
+        transform: rotate(45deg);
+    }
+
+    .line:last-child {
+        transform: rotate(-45deg);
+    }
 }
 
 img.icon {
     margin-left: 15px;
 }
 
-.ham-menu-close{
+.ham-menu-close {
     width: 30px;
     height: 3px;
     background-color: #333;
     margin: 3px;
 }
+
 @media (max-width: 768px) {
     .ham-menu {
         display: flex;
         flex-direction: column;
     }
+
     .hamburger-menu-line.dark-mode {
         color: #fff;
     }
@@ -267,7 +469,7 @@ p {
     border-radius: 10px;} */
 
 #myBtn {
-    font-family:'iranyekan';
+    font-family: 'iranyekan';
     display: none;
     position: fixed;
     bottom: 20px;
@@ -282,36 +484,95 @@ p {
     padding: 15px;
     border-radius: 4px;
 }
-#warning{
+
+#warning {
     background-color: white;
     padding: 1rem;
     color: var(--dark-brown);
     border-radius: 5px;
 }
+
 .x {
     display: none;
     position: relative;
     width: 30px;
     height: 30px;
-  
-  
-.line {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color:#333;
-    transform-origin: center;
-  }
-  
-  .line:first-child {
-    transform: rotate(45deg);
-  }
-  
-  .line:last-child {
-    transform: rotate(-45deg);
-  }
+
+
+    .line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transform-origin: center;
+    }
+
+    .line:first-child {
+        transform: rotate(45deg);
+    }
+
+    .line:last-child {
+        transform: rotate(-45deg);
+    }
 }
+
 @media only screen and (max-width: 768px) {
-.container-logo{display: flex;
-                flex-direction: column;}
-  }
+    .container-logo {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+/* Mixed-fruit-juice */
+.Mixed-fruit-juice {
+    background-color: white;
+    /* padding: 2rem; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+    text-align: center;
+    max-width: 100%;
+}
+
+.selection-area {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.juice-select {
+    flex: 1;
+}
+
+select {
+    font-family: 'iranyekan';
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.7rem;
+}
+
+#result {
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.available {
+    background-color: #e6ffe6;
+    color: #006600;
+}
+
+.unavailable {
+    background-color: #ffe6e6;
+    color: #cc0000;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 2rem;
+}

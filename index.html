@@ -1090,6 +1090,28 @@
             <h2 class="title-h2" id="Mixed-fruit-juice">آبمیوه های ترکیبی</h2>
             <div class="menu-items">
                 <div class="menu-item">
+                    <div class="Mixed-fruit-juice">
+                        <h2>ترکیب آبمیوه طبیعی</h2>
+                        <div class="selection-area">
+                            <div class="juice-select">
+                                <label for="juice1">میوه اول:</label>
+                                <select id="juice1" onchange="updateSelections('juice1', 'juice2')">
+                                    <option value="">انتخاب کنید</option>
+                                </select>
+                            </div>
+                            <div class="juice-select">
+                                <label for="juice2">میوه دوم:</label>
+                                <select id="juice2" onchange="updateSelections('juice2', 'juice1')">
+                                    <option value="">انتخاب کنید</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="result"></div>
+                    </div>
+                    <script src="./script.js"></script
+                </div>
+                
+                <!-- <div class="menu-item">
                     <h3>موز و انبه</h3>
                     <p></p>
                     <span>تومان&nbsp;130</span>
@@ -1339,7 +1361,7 @@
                         <img loading="lazy" src="./assets/images/a-cup-espresso.png" alt="انار و آلبالو"
                             class="rounded-image" id="enlarged-image" width="150px" height="150px">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
