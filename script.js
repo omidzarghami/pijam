@@ -32,10 +32,10 @@ const combinations = {
     'انار-زرشک': 85,
     'آلبالو-شاتوت': 89,
     'آلبالو-ذغال اخته': 89,
-    'شاتوت-توت فرنگی':120,
-    'توت فرنگی-هندوانه':99,
-    'هویج-کرفس':70,
-    'آناناس-نارگیل':150,
+    'شاتوت-توت فرنگی': 120,
+    'توت فرنگی-هندوانه': 99,
+    'هویج-کرفس': 70,
+    'آناناس-نارگیل': 150,
 };
 
 // استخراج لیست تمام میوه‌های منحصر به فرد
@@ -170,11 +170,13 @@ const products = [
         name: "شیرموز توت فرنگی",
         price: 85
     },
-    {   id: 10,
+    {
+        id: 10,
         name: "شیرموز طالبی",
         price: 95
     },
-    {   id: 11,
+    {
+        id: 11,
         name: "شیرموز فندق",
         price: 99
     },
@@ -183,15 +185,28 @@ const products = [
         name: "شیرموز انبه",
         price: 120
     },
-    {   id: 13,
+    {
+        id: 13,
         name: "شیرموز بزرگ",
-        price: 85}
-    ];
+        price: 85
+    },
+    {
+        id: 13,
+        name: "شیرموز بستنی",
+        price: 70
+    },
+    {
+        id: 14,
+        name: "شیرموز بستنی بزرگ",
+        price: 90
+    }
+
+];
 
 // تابع برای ایجاد آپشن‌های سلکت باکس
 function createSelectOptions() {
     const selector = document.querySelector('.product-selector');
-    
+
     // اضافه کردن آپشن پیش‌فرض
     const defaultOption = document.createElement('option');
     defaultOption.value = "";
@@ -199,7 +214,7 @@ function createSelectOptions() {
     defaultOption.disabled = true;
     defaultOption.selected = true;
     selector.appendChild(defaultOption);
-    
+
     // اضافه کردن محصولات به سلکت باکس
     products.forEach(product => {
         const option = document.createElement('option');
@@ -214,7 +229,7 @@ function updatePrice() {
     const selector = document.querySelector('.product-selector');
     const priceDisplay = document.getElementById('priceDisplay');
     const selectedPrice = selector.value;
-    
+
     if (selectedPrice) {
         const formattedPrice = new Intl.NumberFormat('fa-IR').format(selectedPrice);
         priceDisplay.textContent = `قیمت: ${formattedPrice} تومان`;
@@ -260,7 +275,7 @@ const pistachioMilkProducts = [
 // تابع برای ایجاد آپشن‌های سلکت باکس
 function createPistachioDrinkOptions() {
     const selector = document.querySelector('.pistachio-drink-selector');
-    
+
     // اضافه کردن آپشن پیش‌فرض
     const defaultOption = document.createElement('option');
     defaultOption.value = "";
@@ -268,7 +283,7 @@ function createPistachioDrinkOptions() {
     defaultOption.disabled = true;
     defaultOption.selected = true;
     selector.appendChild(defaultOption);
-    
+
     // اضافه کردن محصولات به سلکت باکس
     pistachioMilkProducts.forEach(product => {
         const option = document.createElement('option');
@@ -284,7 +299,7 @@ function updatePistachioDrinkPrice() {
     const selector = document.querySelector('.pistachio-drink-selector');
     const priceDisplay = document.getElementById('pistachioPriceDisplay');
     const selectedPrice = selector.value;
-    
+
     if (selectedPrice) {
         const formattedPrice = new Intl.NumberFormat('fa-IR').format(selectedPrice);
         priceDisplay.textContent = `قیمت: ${formattedPrice} تومان`;
