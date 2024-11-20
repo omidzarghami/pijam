@@ -182,7 +182,7 @@ html {
 body {
     font-family: "iranyekan", sans-serif;
     transition: background-color 0.3s ease;
-    background-color: var(--olive-green);
+    background-color: var(--accent);
     line-height: 1;
 }
 
@@ -478,7 +478,7 @@ p {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #7D8F69;
+    background-color: #3A5F41;
     color: white;
     cursor: pointer;
     padding: 15px;
